@@ -1,5 +1,5 @@
 # Script created as part of the Coursera "Getting and Cleaning Data" Project 
-#    Output: TidyDataSet.csv, file with tidy data set. 
+#    Output: TidyDataSet.csv ;file with tidy data set. 
 # The script assumes to have the "UCI HAR Dataset" directory containing
 # all the train data and test data withing the users primary working directory. 
 # The tidy data set will be stored in the file TidyDataSet.csv within an output
@@ -11,9 +11,9 @@
 ################################################################################
 # Step 1: Setup Environment
 ################################################################################
-# set work directory to UCI CHAR Dataset: wrk.dir
-# set train directory to train directory within work directory: trn.dir
-# set test directory to test directory within work directory: tst.dir
+# Set work directory to UCI CHAR Dataset: wrk.dir
+# Set train directory to train directory within work directory: trn.dir
+# Set test directory to test directory within work directory: tst.dir
 wrk.dir <- paste(getwd(),"UCI HAR Dataset",sep = "/")
 trn.dir <- paste(wrk.dir,"train/",sep="/")
 tst.dir <- paste(wrk.dir,"test/",sep="/")
@@ -36,17 +36,17 @@ features <- read.table(paste(wrk.dir,"/features.txt",sep="/"))
 ################################################################################
 # Step 3: Assing proper descriptions to variables
 ################################################################################
-# Use features informatio to assign proper descriptions in the dataframes 
+# Use features information to assign proper descriptions in the dataframes 
 # replacing V1,V2,... 
 header.names<-features$V2    #descriptions in column V2 of dataframe features
-# Do some further cleanup of the descriptions, replace "-" with "." character
+# Additional cleanup of the descriptions, replacing "-" with "."
 # See google's R style guide
 # https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
 header.names <- gsub("\\-", ".", header.names)
 # Assign these cleaned-up descriptions to train and test tables
 names(tst.data)<-header.names
 names(trn.data)<-header.names
-# Assigning description to tables containing activity and subject information 
+# Assign description to tables containing activity and subject information 
 names(tst.y)<-"activity"
 names(trn.y)<-"activity"
 names(tst.subject)<-"subject"
@@ -99,13 +99,14 @@ requested.data <-combined.data[,filter]
 ################################################################################
 # Step 8: Create independent tidy data set with the average of each variable 
 ################################################################################
-# for each activity and each subject.  
+# For each activity and each subject.  
 # Using the aggregate function and dot notation to select all variables/features
 mean.data <- aggregate(. ~ activity + subject,requested.data, mean)
    
 ################################################################################
 # Step 9: Store second independent data set in file and output directory
 ################################################################################
+# Create file ./UCI HAR Dataset/output/TidyDataSet.csv
 output.dir <- paste(wrk.dir,"output",sep = "/")
 if(!file.exists(output.dir)) { dir.create(output.dir)} 
 output.file <- paste(output.dir,"TidyDataSet.csv" ,sep = "/")
