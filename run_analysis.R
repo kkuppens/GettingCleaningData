@@ -57,19 +57,20 @@ names(trn.subject)<-"subject"
 ################################################################################
 # Using "which" command but also gsub would have been an alternative
 # Set names for activities within the test data
-tst.y$activity[which(tst.y$activity==1)]<- "WALKING"
-tst.y$activity[which(tst.y$activity==2)]<- "WALKING_UPSTAIRS"
-tst.y$activity[which(tst.y$activity==3)]<- "WALKING_DOWNSTAIRS"
-tst.y$activity[which(tst.y$activity==4)]<- "SITTING"
-tst.y$activity[which(tst.y$activity==5)]<- "STANDING"
-tst.y$activity[which(tst.y$activity==6)]<- "LAYING"
+# Using logical vector for selecting and replacing activity name
+tst.y$activity[(tst.y$activity==1)]<- "WALKING"
+tst.y$activity[(tst.y$activity==2)]<- "WALKING_UPSTAIRS"
+tst.y$activity[(tst.y$activity==3)]<- "WALKING_DOWNSTAIRS"
+tst.y$activity[(tst.y$activity==4)]<- "SITTING"
+tst.y$activity[(tst.y$activity==5)]<- "STANDING"
+tst.y$activity[(tst.y$activity==6)]<- "LAYING"
 # Set names for activities within the train data
-trn.y$activity[which(trn.y$activity==1)]<- "WALKING"
-trn.y$activity[which(trn.y$activity==2)]<- "WALKING_UPSTAIRS"
-trn.y$activity[which(trn.y$activity==3)]<- "WALKING_DOWNSTAIRS"
-trn.y$activity[which(trn.y$activity==4)]<- "SITTING"
-trn.y$activity[which(trn.y$activity==5)]<- "STANDING"
-trn.y$activity[which(trn.y$activity==6)]<- "LAYING"
+trn.y$activity[(trn.y$activity==1)]<- "WALKING"
+trn.y$activity[(trn.y$activity==2)]<- "WALKING_UPSTAIRS"
+trn.y$activity[(trn.y$activity==3)]<- "WALKING_DOWNSTAIRS"
+trn.y$activity[(trn.y$activity==4)]<- "SITTING"
+trn.y$activity[(trn.y$activity==5)]<- "STANDING"
+trn.y$activity[(trn.y$activity==6)]<- "LAYING"
 
 ################################################################################
 # Step 5: Combine all test resp. train data
