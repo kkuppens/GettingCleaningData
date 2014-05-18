@@ -1,14 +1,14 @@
 ##Coursera's "Getting and Cleaning Data" Project.
 In this repository you will find:
  
-###a) This README.md with: 
+###a) This README.md: 
 	Description of the project. 
 	Additional information and decisions taken during the project. 
 	Explanation of the run_analysis.R script.
-###b) The CodeBook.md with:
+###b) CodeBook.md:
 	Data description: Raw Data, variables, variable descriptions and units.
 	Data Transformations: actions for producing the first and second tidy data set. 
-###c) The run_Analysis.R script:
+###c) run_Analysis.R script:
 	The actual script that when run in R or Rstudio will produce the tidy data sets using the raw data.
 
 
@@ -59,7 +59,6 @@ File location: "./UCI HAR Dataset/output/TidyDataSet.txt".
 Coursera allows you to upload the data file into a .txt format. For this reason decided to write to a tab delimited text file. 
 
 ##3. R Script - run_analysis.R
-
 
 You can run this scrip from within R or Rstudio given that the data for the project is within the primary working directory.
 The script has been broken down into several steps, step 1 to 9. You can select the required steps from the script and run from within R/RStudio. In order to obtain the first tidy data set it's sufficient to run step 1 to step 7. For obtaining the second tidy set you will also need to run step 8. The final step, step 9, writes the second tidy data set into a tab delimited text file within the "UCI HAR Dataset/output" directory. 
