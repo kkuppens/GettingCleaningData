@@ -98,8 +98,8 @@ requested.data <-combined.data[,filter]
   
 ################################################################################
 # Step 8: Create independent tidy data set with the average of each variable 
+# for each activity and each subject.  
 ################################################################################
-# For each activity and each subject.  
 # Using the aggregate function and dot notation to select all variables/features
 mean.data <- aggregate(. ~ subject + activity,requested.data, mean)
    
