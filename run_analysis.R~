@@ -1,5 +1,5 @@
 # Script created as part of the Coursera "Getting and Cleaning Data" Project 
-#    Output: TidyDataSet.txt ;file with tidy data set. 
+#    Output: TidyDataSet.csv ;file with tidy data set. 
 # The script assumes to have the "UCI HAR Dataset" directory containing
 # all the train data and test data withing the users primary working directory. 
 # The tidy data set will be stored in the file TidyDataSet.txt within an output
