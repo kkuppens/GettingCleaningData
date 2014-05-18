@@ -110,6 +110,5 @@ mean.data <- aggregate(. ~ subject + activity,requested.data, mean)
 output.dir <- paste(wrk.dir,"output",sep = "/")
 if(!file.exists(output.dir)) { dir.create(output.dir)} 
 output.file <- paste(output.dir,"TidyDataSet.txt" ,sep = "/")
-#write.csv(mean.data, output.file,row.names = F)
 #using tab delimited text file for upload to coursera
 write.table(mean.data, output.file,sep = "\t",row.names = F)
