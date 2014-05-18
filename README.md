@@ -1,4 +1,4 @@
-##Repository created as part of the "Getting and Cleaning Data" Project.
+##Coursera's "Getting and Cleaning Data" Project.
 In this repository you will find:
  
 ###a) This README.md with: 
