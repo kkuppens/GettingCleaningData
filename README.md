@@ -1,4 +1,4 @@
-This repository has been created as part of the Coursera's course Getting and Cleaning Data Project.
+##This repository has been created as part of the Coursera's course Getting and Cleaning Data Project.
 In this repository you will find:
  
 ###This README.md with: 
@@ -12,7 +12,7 @@ In this repository you will find:
 	The actual script that when run in R or Rstudio will produce the tidy data sets using the raw data.
 
 
-##Project Description
+##1 Project Description
 
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 
 1 a tidy data set as described below, 
@@ -38,7 +38,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 Good luck!
 
 
-## Additional Remarks/Project Decisions
+##2 Additional Remarks/Project Decisions
 
 1. Script assumes to have the "UCI HAR Dataset" directory within the primary working directory. (see getwd())
 2. Used google's R style guide (https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml) 
@@ -47,20 +47,34 @@ as naming convention for variables, function names, ...
 Namely the Inertial Signals information has been disregarded because none contains information 
 related to the requested mean or standard deviation.
 4. Some functions to highlight.
-4.1 gsub() to cleanup some of the header information.
-4.2 grep() to filter the data to the requested mean and std variables.
-4.3 The aggregate() function in combination with mean() and the dot notition (apply to all features).
+The gsub() function used to cleanup some of the header information.
+The grep() function used to filter the data to the requested mean and std variables.
+The aggregate() function used in combination with mean() and the dot notition (apply to all features) for calculating the requested averages.
 5. For the second data set decided to first aggregate by subject and then by activity. 
 In case it's prefered to aggregate first by activity and then by subject it's sufficient to change the order of
 activity and subject in the aggregate function like this aggregate(. ~ activity + subject,requested.data, mean)
 6. The second tiday data set will be stored in a tab delimited text file called "TidyDataSet.txt" within an output
-directory from "UCI HAR Dataset"
-The script will check for existens of the output directory and create if not existent.
-location of the file: "./UCI HAR Dataset/output/TidyDataSet.txt" 
+directory from "UCI HAR Dataset". The script will check for existens of the output directory and create if not existent.
+File location: "./UCI HAR Dataset/output/TidyDataSet.txt".
+Coursera allows you to upload the data file into a .txt format. For this reason decided to write to a tab delimited text file. 
 
-## R Script - run_analysis.R
+##3 R Script - run_analysis.R
+
+The script has been broken down into several steps, 1 to 9.
+###To obtain the first tidy data set it sufficiant to run step 1-7
+###To obtain the second tidy set you will also need to run step 8
+The final step 9 writes the second tidy data set to a tab delimited text file. 
+
+####Step 1: Setup Environment
+####Step 2: Read all relevant test and training data
+####Step 3: Assing proper descriptions to variables
+####Step 4: Use descriptive names for the activities
+####Step 5: Combine all test resp. train data
+####Step 6: Merge both the test and train data
+####Step 7: Select only features related to mean or standard deviation
+####Step 8: Create independent tidy data set with the average of each variable 
+####Step 9: Store second independent data set in file and output directory
 
 
-To be posted here
 
 
