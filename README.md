@@ -54,7 +54,7 @@ The aggregate() function used in combination with mean() and the dot notition (a
 In case it's prefered to aggregate first by activity and then by subject it's sufficient to change the order of
 activity and subject in the aggregate function like this aggregate(. ~ activity + subject,requested.data, mean)
 6. The second tidy data set will be stored in a tab delimited text file called "TidyDataSet.txt" within an output
-directory from "UCI HAR Dataset". The script will check for existens of the output directory and create if not existent.
+directory from "UCI HAR Dataset". The script will check for existing output directory and create if not present.
 File location: "./UCI HAR Dataset/output/TidyDataSet.txt".
 Coursera allows you to upload the data file into a .txt format. For this reason decided to write to a tab delimited text file. 
 
@@ -91,7 +91,7 @@ data set. In case it's prefered to aggregate first by activity and then by subje
 activity and subject in the aggregate function like this aggregate(. ~ activity + subject,requested.data, mean) 
 ####Step 9: Store second independent data set in file and output directory
 The tidy data set will be stored in the file TidyDataSet.txt within an output
-directory "output" that will be created if not existent within the "UCI HAR Dataset" directory.
+directory "output" that will be created if not present within the "UCI HAR Dataset" directory.
 File location: ./UCI HAR Dataset/output/TidyDataSet.txt.
 
 
