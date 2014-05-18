@@ -7,21 +7,18 @@ You will find there besides the raw data itself Data Set information and Attribu
 The data for the project can be foud at location 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 ##Variables
-activity:  Activity label with possible values; WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING,
- 	   LAYING
-subject: An identifier of the subject who carried out the experiment; 1..30 
+A desciption and list of all features can be found in the files "features_info.txt" and "features.txt" to be found 
+within the zip file containing the data set. Below a description for only the feature variables within the tidy data set. 
 
-A desciption and list of all features can be found in the files features_info.txt and features.txt to be found 
-within the zip file containing the data set. Below a description for only the variables within the tidy data set. 
+activity:  Activity label with possible values; WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, 
+SITTING, STANDING, LAYING
+subject: An identifier of the subject who carried out the experiment; 1..30 
 
 All variables (features) within the tidy data set besides activity and subject are estimated variables from signals. 
 
-There are two types within the tidy data set:
-	* mean
-        * standard deviation (std)
-For each type there are two units. 
-	* variables starting with an t (e.g tBodyAcc.mean().X) are time domain signals.   
-	* variables starting with an f (e.g fBodyAccMag.std()) are frequency domain signals.
+There are two types within the tidy data set: mean and standard deviation (std)
+For each type there are two units. The variables starting with an t (e.g tBodyAcc.mean().X) being time domain signals.
+The variables starting with an f (e.g fBodyAccMag.std()) being frequency domain signals.
 
  
 	[1]  "activity"                        "subject"                        
