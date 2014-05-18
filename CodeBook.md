@@ -10,11 +10,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 A desciption and list of all features can be found in the files "features_info.txt" and "features.txt" to be found 
 within the zip file containing the data set. Below a description and list for only the feature variables within the tidy data set. 
 
-activity:  Activity label with possible values; WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, 
+###activity
+Activity label with possible values; WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, 
 SITTING, STANDING, LAYING.
 
-subject: An identifier of the subject who carried out the experiment; 1..30.
+###subject
+An identifier of the subject who carried out the experiment; 1..30.
 
+###features
 All remaining variables (features) within the tidy data set, besides activity and subject, are estimated variables from signals. 
 
 There are two types within the tidy data set: mean and standard deviation (std).
