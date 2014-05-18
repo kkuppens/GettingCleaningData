@@ -1,17 +1,20 @@
 Code Book
 ===================
-#Raw Data
+##Raw Data
 A full description is available at the site where the data was obtained 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 You will find there besides the raw data itself Data Set information and Attribute Information. 
 The data for the project can be foud at location 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-##Variables
-###Description of variable. 
-activity:  Activity label with possible values; WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+###Variables
+####Description of variable. 
+activity:  Activity label with possible values; WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING,
+ 	   LAYING
 subject: An identifier of the subject who carried out the experiment; 1..30 
 
-A desciption and list of all features can be found in the files features_info.txt and features.txt to be found within the zip file containing the data set.
+A desciption and list of all features can be found in the files features_info.txt and features.txt to be found 
+within the zip file containing the data set.
+
 Below a description for only the variables within the tidy data set. 
 
 All variables within the tidy data set besides activity and subject are estimated variables from signals. 
