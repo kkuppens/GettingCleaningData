@@ -1,5 +1,5 @@
 ##Repository created as part of the "Getting and Cleaning Data" Project.
-In this repository;
+In this repository you will find:
  
 ###a) This README.md with: 
 	Description of the project. 
@@ -53,7 +53,7 @@ The aggregate() function used in combination with mean() and the dot notition (a
 5. For the second data set decided to first aggregate by subject and then by activity. 
 In case it's prefered to aggregate first by activity and then by subject it's sufficient to change the order of
 activity and subject in the aggregate function like this aggregate(. ~ activity + subject,requested.data, mean)
-6. The second tiday data set will be stored in a tab delimited text file called "TidyDataSet.txt" within an output
+6. The second tidy data set will be stored in a tab delimited text file called "TidyDataSet.txt" within an output
 directory from "UCI HAR Dataset". The script will check for existens of the output directory and create if not existent.
 File location: "./UCI HAR Dataset/output/TidyDataSet.txt".
 Coursera allows you to upload the data file into a .txt format. For this reason decided to write to a tab delimited text file. 
@@ -65,7 +65,7 @@ You can run this scrip from within R or Rstudio given that the data for the proj
 The script has been broken down into several steps, step 1 to 9. You can select the required steps from the script and run from within R/RStudio. In order to obtain the first tidy data set it's sufficient to run step 1 to step 7. For obtaining the second tidy set you will also need to run step 8. The final step, step 9, writes the second tidy data set into a tab delimited text file within the "UCI HAR Dataset/output" directory. 
 
 ####Step 1: Setup Environment
-Sets variables to the raw data to be read into R.
+Sets variables to the raw data locations to be read into R.
 ####Step 2: Read all relevant test and training data
 Reads the relevant test and training data into R data variables. 
 ####Step 3: Assing proper descriptions to variables
