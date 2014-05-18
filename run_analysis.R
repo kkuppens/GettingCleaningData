@@ -55,9 +55,9 @@ names(trn.subject)<-"subject"
 ################################################################################
 # Step 4: Use descriptive names for the activities
 ################################################################################
-# Using "which" command but also gsub would have been an alternative
 # Set names for activities within the test data
-# Using logical vector for selecting and replacing activity name
+# Using logical vector for selecting and replacing number with activity name
+
 tst.y$activity[(tst.y$activity==1)]<- "WALKING"
 tst.y$activity[(tst.y$activity==2)]<- "WALKING_UPSTAIRS"
 tst.y$activity[(tst.y$activity==3)]<- "WALKING_DOWNSTAIRS"
