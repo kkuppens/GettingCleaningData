@@ -58,7 +58,7 @@ directory from "UCI HAR Dataset". The script will check for existing output dire
 File location: "./UCI HAR Dataset/output/TidyDataSet.txt".
 Coursera allows you to upload the data file into a .txt format. For this reason decided to write to a tab delimited text file. 
 7. Using the format(x,scientific=TRUE) function, I noticed that the original data contains more numbers behind the decimal
-than typical shown in R (7 behind decimal). For this reason I decided to not alter (i.e. round to 7 behind decimal) any of the data writen to the file. 
+than typical shown in R (7 behind decimal). For this reason I decided to not alter (i.e. round to 7 behind decimal) any of the data written to the file. 
 
 ##3. R Script - run_analysis.R
 
