@@ -99,7 +99,7 @@ Used the set of filtered variables again to select only the required variables f
 
 Step 5: Create independent tidy data set with the average of each variable or each activity and each subject.
 
-Used the aggregate() function in combination with mean and dot notation to obtain the second requested tidy
+Used the aggregate() function in combination with mean and dot notation (for all features) to obtain the second requested tidy
 data set.  
 
 
