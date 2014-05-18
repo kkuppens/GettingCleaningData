@@ -11,14 +11,15 @@ A desciption and list of all features can be found in the files "features_info.t
 within the zip file containing the data set. Below a description for only the feature variables within the tidy data set. 
 
 activity:  Activity label with possible values; WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, 
-SITTING, STANDING, LAYING
-subject: An identifier of the subject who carried out the experiment; 1..30 
+SITTING, STANDING, LAYING.
 
-All variables (features) within the tidy data set besides activity and subject are estimated variables from signals. 
+subject: An identifier of the subject who carried out the experiment; 1..30.
 
-There are two types within the tidy data set: mean and standard deviation (std)
-For each type there are two units. The variables starting with an t (e.g tBodyAcc.mean().X) being time domain signals.
-The variables starting with an f (e.g fBodyAccMag.std()) being frequency domain signals.
+All remaining variables (features) within the tidy data set, besides activity and subject, are estimated variables from signals. 
+
+There are two types within the tidy data set: mean and standard deviation (std).
+For each type there are two units. The variables starting with an t, e.g "tBodyAcc.mean().X" being time domain signals.
+The variables starting with an f, e.g "fBodyAccMag.std()" being frequency domain signals.
 
  
 	[1]  "activity"                        "subject"                        
