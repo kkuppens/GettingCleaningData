@@ -49,7 +49,7 @@ related to the requested mean or standard deviation.
 4. Some functions to highlight.
 The gsub() function used to cleanup some of the header information.
 The grep() function used to filter the data to the requested mean and std variables.
-The aggregate() function used in combination with mean() and the dot notition (apply to all features) for calculating the requested averages.
+The aggregate() function used in combination with mean() and the dot notation (apply to all features) for calculating the requested averages.
 5. For the second data set decided to first aggregate by subject and then by activity. 
 In case it's prefered to aggregate first by activity and then by subject it's sufficient to change the order of
 activity and subject in the aggregate function like this aggregate(. ~ activity + subject,requested.data, mean)
@@ -57,8 +57,7 @@ activity and subject in the aggregate function like this aggregate(. ~ activity 
 directory from "UCI HAR Dataset". The script will check for existing output directory and create if not present.
 File location: "./UCI HAR Dataset/output/TidyDataSet.txt".
 Coursera allows you to upload the data file into a .txt format. For this reason decided to write to a tab delimited text file. 
-7. Using the format(x,scientific=TRUE) function, I noticed that the original data contains more numbers behind the decimal
-than typical shown in R (7 behind decimal). For this reason I decided to keep inputs precision and to not alter (i.e. round to 7 behind decimal) any of the data written to the file. 
+7. Using the format(x,scientific=TRUE) function or looking directly at the project data, I noticed that the original data contains more numbers behind the decimal than typical shown in R (7 behind decimal). For this reason I decided to keep inputs precision and to not alter (i.e. round to 7 behind decimal) any of the data written to the file. 
 
 ##3. R Script - run_analysis.R
 
