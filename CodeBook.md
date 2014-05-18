@@ -25,6 +25,8 @@ For each type there are two units. The variables starting with an t, e.g "tBodyA
 The variables starting with an f, e.g "fBodyAccMag.std()" being frequency domain signals. To be more precise the mean and standard deviation
 from a time and frequency domain signal.
 
+###Tidy data set variable list
+
  
 	[1]  "activity"                        "subject"                        
 	[3]  "tBodyAcc.mean().X"               "tBodyAcc.mean().Y"              
