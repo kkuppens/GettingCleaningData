@@ -1,4 +1,4 @@
-Code Book
+Data Description
 ===================
 ##Raw Data
 A full description is available at the site where the data was obtained 
@@ -6,24 +6,22 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 You will find there besides the raw data itself Data Set information and Attribute Information. 
 The data for the project can be foud at location 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-###Variables
-####Description of variable. 
+##Variables
 activity:  Activity label with possible values; WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING,
  	   LAYING
 subject: An identifier of the subject who carried out the experiment; 1..30 
 
 A desciption and list of all features can be found in the files features_info.txt and features.txt to be found 
-within the zip file containing the data set.
+within the zip file containing the data set. Below a description for only the variables within the tidy data set. 
 
-Below a description for only the variables within the tidy data set. 
+All variables (features) within the tidy data set besides activity and subject are estimated variables from signals. 
 
-All variables within the tidy data set besides activity and subject are estimated variables from signals. 
-
-There are two types:
-	mean and standard deviation (std).
+There are two types within the tidy data set:
+	* mean
+        * standard deviation (std)
 For each type there are two units. 
-	variables starting with an t (e.g tBodyAcc.mean().X) are time domain signals.   
-	variables starting with an f (e.g fBodyAccMag.std()) are frequency domain signals.
+	* variables starting with an t (e.g tBodyAcc.mean().X) are time domain signals.   
+	* variables starting with an f (e.g fBodyAccMag.std()) are frequency domain signals.
 
  
 	[1]  "activity"                        "subject"                        
@@ -67,8 +65,6 @@ For each type there are two units.
 	[77] "fBodyGyro.std().Z"               "fBodyAccMag.std()"              
 	[79] "fBodyBodyAccJerkMag.std()"       "fBodyBodyGyroMag.std()"         
 	[81] "fBodyBodyGyroJerkMag.std()"     
-
-
 
 Data Transformations
 ===================
