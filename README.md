@@ -61,6 +61,7 @@ Coursera allows you to upload the data file into a .txt format. For this reason 
 ##3. R Script - run_analysis.R
 
 You can run this scrip from within R or Rstudio given that the data for the project is within the primary working directory.
+Project data -> https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 The script has been broken down into several steps, step 1 to 9. You can select the required steps from the script and run from within R/RStudio. In order to obtain the first tidy data set it's sufficient to run step 1 to step 7. For obtaining the second tidy set you will also need to run step 8. The final step, step 9, writes the second tidy data set into a tab delimited text file within the "UCI HAR Dataset/output" directory. 
 
 ####Step 1: Setup Environment
