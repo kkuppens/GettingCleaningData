@@ -67,7 +67,7 @@ The variables starting with the letter f, e.g "fBodyAccMag.std()" being frequenc
 [75] "fbodygyro.std.x"               "fbodygyro.std.y"              
 [77] "fbodygyro.std.z"               "fbodyaccmag.std"              
 [79] "fbodybodyaccjerkmag.std"       "fbodybodygyromag.std"         
-[81] "fbodybodygyrojerkmag.std"     
+[81] "fbodybodygyrojerkmag.std"    
 
 
 Data Transformations
