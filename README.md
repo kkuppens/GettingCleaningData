@@ -56,7 +56,7 @@ activity and subject in the aggregate function like this aggregate(. ~ activity 
 directory from "UCI HAR Dataset". The script will check for existing output directory and create if not present.
 File location: "./UCI HAR Dataset/output/TidyDataSet.txt".
 Coursera allows you to upload the data file into a .txt format. For this reason decided to write to a tab delimited text file. 
-8. Using the format(x,scientific=TRUE) function or looking directly at the project data, I noticed that the original data contains more numbers behind the decimal than typical shown in R (7 behind decimal). For this reason I decided to keep inputs precision and to not alter (i.e. round to 7 behind decimal) any of the data written to the file. 
+8. Using the format(x,scientific=TRUE) function or looking directly at the project data, I noticed that the original data contains more numbers behind the decimal than typical shown in R (7 behind decimal). For this reason I decided to keep inputs precision and to not alter (i.e. no rounding to 7 behind decimal) any of the data written to the file. 
 9. Script is created in a Linux (Ubuntu) environment. Note that the "/" character is being used as part of setting the raw data file path locations.
 10. The second tidy data set, the one written finally to file, contains 81 variables (79 features) and 180 observations.    
 
