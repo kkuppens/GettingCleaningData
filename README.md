@@ -48,7 +48,8 @@ related to the requested mean or standard deviation.
 The gsub() function used to cleanup some of the header information.
 The grep() function used to filter the data to the requested mean and std variables.
 The aggregate() function used in combination with mean() and the dot notation (apply to all features) for calculating the requested averages.
-5. All features related to mean and standard deviation haven been selected. As a results features like meanFreq have been also selected.  
+5. All features related to mean and standard deviation haven been selected. Concrete all features with mean(), std() and meanFreq() have been selected. 
+Other features like angle(), mad(), max(),... have been disregarded. See also features_info.txt.  
 6. For the second data set decided to first aggregate by subject and then by activity. 
 In case it's prefered to aggregate first by activity and then by subject it's sufficient to change the order of
 activity and subject in the aggregate function like this aggregate(. ~ activity + subject,requested.data, mean)
@@ -89,6 +90,7 @@ Used rbind() to copy/paste the rows from the train set under the data from test 
 The first requested tidy data set needed to contain only the features related to mean and standard deviation. 
 Used the heading information "names()" and filtered using "grep()" to obtain only the requested variables. 
 Used the set of filtered variables again to select only the required variables from the data set.
+Removed brackets "(" and ")" and put all variables in lower case. See Google's R style above.
 ####Step 8: Create independent tidy data set with the average of each variable
 Used the aggregate() function in combination with mean and dot notation (for all features) to obtain the second requested tidy
 data set. In case it's prefered to aggregate first by activity and then by subject it's sufficient to change the order of
