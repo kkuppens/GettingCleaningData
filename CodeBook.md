@@ -27,11 +27,11 @@ The variables starting with the letter f, e.g "fBodyAccMag.std()" being frequenc
 ###Tidy data set variable list
 
  
- [1] "subject"                       "activity"                     
- [3] "tbodyacc.mean.x"               "tbodyacc.mean.y"              
- [5] "tbodyacc.mean.z"               "tgravityacc.mean.x"           
- [7] "tgravityacc.mean.y"            "tgravityacc.mean.z"           
- [9] "tbodyaccjerk.mean.x"           "tbodyaccjerk.mean.y"          
+[1] "subject"                       "activity"                     
+[3] "tbodyacc.mean.x"               "tbodyacc.mean.y"              
+[5] "tbodyacc.mean.z"               "tgravityacc.mean.x"           
+[7] "tgravityacc.mean.y"            "tgravityacc.mean.z"           
+[9] "tbodyaccjerk.mean.x"           "tbodyaccjerk.mean.y"          
 [11] "tbodyaccjerk.mean.z"           "tbodygyro.mean.x"             
 [13] "tbodygyro.mean.y"              "tbodygyro.mean.z"             
 [15] "tbodygyrojerk.mean.x"          "tbodygyrojerk.mean.y"         
