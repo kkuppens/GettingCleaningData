@@ -1,7 +1,7 @@
 # Script created as part of the Coursera "Getting and Cleaning Data" Project 
 #    Output: TidyDataSet.txt ;file with tidy data set. 
 # The script assumes to have the "UCI HAR Dataset" directory containing
-# all the train data and test data withing the users primary working directory. 
+# all the train data and test data within the users primary working directory. 
 # The tidy data set will be stored in the file TidyDataSet.txt within an output
 # directory "output" that will be created if not existent within 
 # the "UCI HAR Dataset" directory.
@@ -36,9 +36,9 @@ features <- read.table(paste(wrk.dir,"/features.txt",sep="/"))
 ################################################################################
 # Step 3: Assing proper descriptions to variables
 ################################################################################
-# Use features information to assign proper descriptions in the dataframes 
+# Use features information to assign proper descriptions in the data frames 
 # replacing V1,V2,... 
-header.names<-features$V2    #descriptions in column V2 of dataframe features
+header.names<-features$V2    #descriptions in column V2 of data frame features
 # Additional cleanup of the descriptions, replacing "-" with "."
 # See google's R style guide
 # https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
