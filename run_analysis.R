@@ -39,10 +39,13 @@ features <- read.table(paste(wrk.dir,"/features.txt",sep="/"))
 # Use features information to assign proper descriptions in the data frames 
 # replacing V1,V2,... 
 header.names<-features$V2    #descriptions in column V2 of data frame features
-# Additional cleanup of the descriptions, replacing "-" with "."
+# Additional cleanup of the descriptions, replacing "-" and "," with "."
+# remove "(" and ")" and put everything in lowercase. 
 # See google's R style guide
 # https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
 header.names <- gsub("\\-", ".", header.names)
+header.names <- gsub("\\,", ".", header.names)
+
 # Assign these cleaned-up descriptions to train and test tables
 names(tst.data)<-header.names
 names(trn.data)<-header.names
@@ -86,6 +89,7 @@ combined.data<- rbind(all.tstdata, all.trndata)
 
 ################################################################################
 # Step 7: Select only features related to mean or standard deviation
+# Final cleanup headers
 ################################################################################
 # Use names/headers of the table to filter based on mean or std 
 combined.header <-names(combined.data)
@@ -93,6 +97,14 @@ filter <-union(grep("mean()", c(combined.header)), grep("std()",
                                                         c(combined.header)))
 filter <- c(1,2,filter)
 requested.data <-combined.data[,filter]
+
+# Final cleanup headers: Remove brackets () and put all variables to lowercase
+header.names <- names(requested.data)
+header.names <- gsub("\\(", "", header.names)
+header.names <- gsub("\\)", "", header.names)
+header.names <- gsub("(\\w)(\\w*)","\\L\\1\\L\\2", header.names,perl=TRUE)
+names(requested.data) <- header.names
+
 # At this point we completed step 1-4 from the Project assignment
 # requested.data being the first tidy data set 
   
