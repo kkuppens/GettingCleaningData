@@ -14,24 +14,24 @@
 # Set work directory to UCI CHAR Dataset: wrk.dir
 # Set train directory to train directory within work directory: trn.dir
 # Set test directory to test directory within work directory: tst.dir
-wrk.dir <- paste(getwd(),"UCI HAR Dataset",sep = "/")
-trn.dir <- paste(wrk.dir,"train/",sep="/")
-tst.dir <- paste(wrk.dir,"test/",sep="/")
+wrk.dir <- paste0(getwd(),"/UCI HAR Dataset")
+trn.dir <- paste0(wrk.dir,"/train")
+tst.dir <- paste0(wrk.dir,"/test")
 
 ################################################################################
 # Step 2: Read all relevant test and training data
 ################################################################################
 # Read all test data
-tst.data <- read.table(paste(tst.dir,"/X_test.txt",sep="/"))
-tst.y <- read.table(paste(tst.dir,"/y_test.txt",sep="/"))
-tst.subject <- read.table(paste(tst.dir,"/subject_test.txt",sep="/"))
+tst.data <- read.table(paste0(tst.dir,"/X_test.txt"))
+tst.y <- read.table(paste0(tst.dir,"/y_test.txt"))
+tst.subject <- read.table(paste0(tst.dir,"/subject_test.txt"))
 # Read all train data
-trn.data <- read.table(paste(trn.dir,"/X_train.txt",sep="/"))
-trn.y <- read.table(paste(trn.dir,"/y_train.txt",sep="/"))
-trn.subject <- read.table(paste(trn.dir,"/subject_train.txt",sep="/"))
+trn.data <- read.table(paste0(trn.dir,"/X_train.txt"))
+trn.y <- read.table(paste0(trn.dir,"/y_train.txt"))
+trn.subject <- read.table(paste0(trn.dir,"/subject_train.txt"))
 # Read labels and features
-activity.labels <- read.table(paste(wrk.dir,"/activity_labels.txt",sep="/"))
-features <- read.table(paste(wrk.dir,"/features.txt",sep="/"))
+activity.labels <- read.table(paste0(wrk.dir,"/activity_labels.txt"))
+features <- read.table(paste0(wrk.dir,"/features.txt"))
 
 ################################################################################
 # Step 3: Assing proper descriptions to variables
