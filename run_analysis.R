@@ -45,7 +45,6 @@ header.names<-features$V2    #descriptions in column V2 of data frame features
 # https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
 header.names <- gsub("\\-", ".", header.names)
 header.names <- gsub("\\,", ".", header.names)
-
 # Assign these cleaned-up descriptions to train and test tables
 names(tst.data)<-header.names
 names(trn.data)<-header.names
@@ -97,14 +96,12 @@ filter <-union(grep("mean()", c(combined.header)), grep("std()",
                                                         c(combined.header)))
 filter <- c(1,2,filter)
 requested.data <-combined.data[,filter]
-
 # Final cleanup headers: Remove brackets () and put all variables to lowercase
 header.names <- names(requested.data)
 header.names <- gsub("\\(", "", header.names)
 header.names <- gsub("\\)", "", header.names)
 header.names <- gsub("(\\w)(\\w*)","\\L\\1\\L\\2", header.names,perl=TRUE)
 names(requested.data) <- header.names
-
 # At this point we completed step 1-4 from the Project assignment
 # requested.data being the first tidy data set 
   
