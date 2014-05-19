@@ -4,12 +4,12 @@ In this repository you will find:
 ###a) This README.md: 
 	Description of the project. 
 	Additional information and decisions taken during the project. 
-	Explanation of the run_analysis.R script.
+	Explanation run_analysis.R script.
 ###b) CodeBook.md:
 	Data description: Raw Data, variables, variable descriptions and units.
-	Data Transformations: actions for producing the first and second tidy data set. 
+	Data Transformations: Data manupulations for producing the first and second tidy data set. 
 ###c) run_Analysis.R script:
-	The actual script that when run in R or Rstudio will produce the tidy data sets using the raw data.
+	The actual script when run in R or Rstudio produces the tidy data sets using the raw data.
 
 
 ##1. Project Description
@@ -35,8 +35,6 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
   4  Appropriately labels the data set with descriptive activity names. 
   5  Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
-Good luck!
-
 
 ##2. Additional Remarks/Project Decisions
 
@@ -50,14 +48,17 @@ related to the requested mean or standard deviation.
 The gsub() function used to cleanup some of the header information.
 The grep() function used to filter the data to the requested mean and std variables.
 The aggregate() function used in combination with mean() and the dot notation (apply to all features) for calculating the requested averages.
-5. For the second data set decided to first aggregate by subject and then by activity. 
+5. All features related to mean and standard deviation haven been selected. As a results features like meanFreq have been also selected.  
+6. For the second data set decided to first aggregate by subject and then by activity. 
 In case it's prefered to aggregate first by activity and then by subject it's sufficient to change the order of
 activity and subject in the aggregate function like this aggregate(. ~ activity + subject,requested.data, mean)
-6. The second tidy data set will be stored in a tab delimited text file called "TidyDataSet.txt" within an output
+7. The second tidy data set will be stored in a tab delimited text file called "TidyDataSet.txt" within an output
 directory from "UCI HAR Dataset". The script will check for existing output directory and create if not present.
 File location: "./UCI HAR Dataset/output/TidyDataSet.txt".
 Coursera allows you to upload the data file into a .txt format. For this reason decided to write to a tab delimited text file. 
-7. Using the format(x,scientific=TRUE) function or looking directly at the project data, I noticed that the original data contains more numbers behind the decimal than typical shown in R (7 behind decimal). For this reason I decided to keep inputs precision and to not alter (i.e. round to 7 behind decimal) any of the data written to the file. 
+8. Using the format(x,scientific=TRUE) function or looking directly at the project data, I noticed that the original data contains more numbers behind the decimal than typical shown in R (7 behind decimal). For this reason I decided to keep inputs precision and to not alter (i.e. round to 7 behind decimal) any of the data written to the file. 
+9. Script is created in a Linux (Ubuntu) environment. Note that the "/" character is being used as part of setting the raw data file path locations.
+10. The second tidy data set, the one written finally to file, contains 81 variables (79 features) and 180 observations.    
 
 ##3. R Script - run_analysis.R
 
@@ -77,8 +78,10 @@ Additional cleanup of the descriptions, replace "-" with "." according Google's 
 ####Step 4: Use descriptive names for the activities
 Use activity_labels.txt information to label the activities within the activity data sets.
 e.g. put/display value WALKING rather than value 1.
+The logical vector functionality has been used to find the activities and set the corresponding label. 
 ####Step 5: Combine all test resp. train data
-The activity, subject and features information is in different data sets. Combined these sets to obtain one set containing all information for resp. train and test. Used cbind() function to paste the three datasets together for resp. test and train data. 
+The activity, subject and features information is in different data sets. Combined these sets to obtain one set containing all information for resp. train and test. 
+Used cbind() function to paste the three datasets together for resp. test and train data. 
 ####Step 6: Merge both the test and train data
 Merged both the test and train data within one data set. 
 Used rbind() to copy/paste the rows from the train set under the data from test set. 
