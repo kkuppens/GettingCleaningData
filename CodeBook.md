@@ -81,7 +81,7 @@ I will not describe the steps here involving setting up the environment, reading
 Ones all data being read into R from the raw data, give the 3 data sets related to activiy, subject and features a
 more descriptive heading. For a more descriptive heading for the features set used the information from the file "features.txt".
 For the activity and subject data set used simply the "activity" and "subject" description itself. 
-Changed furthermore the "-" character with "." in the features heading according google's R style guide. (See README.md)
+Changed furthermore the features heading according google's R style guide. (See README.md)
 
 ### 2: Use descriptive names for the activities.
 
@@ -101,7 +101,6 @@ Merged both the test and train data within one data set.
 The first requested tidy data set needed to contain only the features related to mean and standard deviation. 
 Used the heading information "names()" and filtered using "grep()" to obtain only the requested variables. 
 Used the set of filtered variables again to select only the required variables from the data set.
-Removed brackets "(" and ")" and put all variables in lower case. See Google's R style guide above.
 
 ### 6: Create independent tidy data set with the average of each variable or each activity and each subject.
 
