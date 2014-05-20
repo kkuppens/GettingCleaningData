@@ -21,8 +21,8 @@ An identifier of the subject who carried out the experiment; 1..30.
 All remaining variables (features) within the tidy data set, besides activity and subject, are estimated variables from signals. 
 
 There are two types within the tidy data set: mean and standard deviation (std).
-For each type there are two units. The variables starting with the letter t, e.g "tBodyAcc.mean().X" being time domain signals.
-The variables starting with the letter f, e.g "fBodyAccMag.std()" being frequency domain signals. To be more precise the mean and standard deviation from a time and frequency domain signal.
+For each type there are two units. The variables starting with the letter t, e.g "tbodyacc.mean.x" being time domain signals.
+The variables starting with the letter f, e.g "fbodyaccmag.std" being frequency domain signals. To be more precise the mean and standard deviation from a time and frequency domain signal.
 
 ###Tidy data set variable list
 
