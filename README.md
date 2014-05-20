@@ -10,7 +10,9 @@ In this repository you will find:
 	Data Transformations: Data manupulations for producing the first and second tidy data set. 
 ###c) run_Analysis.R script:
 	The actual script when run in R or Rstudio produces the tidy data sets using the raw data.
-
+###d) TidyDataSet.csv:
+	Tidy data Set output in .csv format for better visibility.
+	Remark: Not part of the project assignment.
 
 ##1. Project Description
 
