@@ -11,8 +11,8 @@ In this repository you will find:
 ###c) run_Analysis.R script:
 	The actual script when run in R or Rstudio produces the tidy data sets using the raw data.
 ###d) TidyDataSet.csv:
-	Tidy data Set output in csv format for better visibility.
-	Remark: Not part of the project assignment.
+	Tidy data Set output in csv format.
+	Remark: Not needed to upload as part of the project assignment, only for better readability.
 
 ##1. Project Description
 
