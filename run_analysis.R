@@ -100,7 +100,7 @@ requested.data <-combined.data[,filter]
 header.names <- names(requested.data)
 header.names <- gsub("\\(", "", header.names)
 header.names <- gsub("\\)", "", header.names)
-header.names <- gsub("(\\w)(\\w*)","\\L\\1\\L\\2", header.names,perl=TRUE)
+header.names <- tolower(header.names)
 names(requested.data) <- header.names
 # At this point we completed step 1-4 from the Project assignment
 # requested.data being the first tidy data set 
@@ -120,4 +120,4 @@ output.dir <- paste(wrk.dir,"output",sep = "/")
 if(!file.exists(output.dir)) { dir.create(output.dir)} 
 output.file <- paste(output.dir,"TidyDataSet.txt" ,sep = "/")
 #using tab delimited text file for upload to coursera
-write.table(mean.data, output.file,sep = "\t",row.names = F)
+write.table(mean.data, output.file, sep="\t" ,row.names = FALSE)
